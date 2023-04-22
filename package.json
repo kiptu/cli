@@ -1,0 +1,33 @@
+{
+  "name": "kiptu-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool to translate language in the terminal.",
+  "main": "./build/cli.js",
+  "author": "Kiptu Software Labs",
+  "license": "MIT",
+  "bin": {
+    "kiptu": "./build/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "setup": "npm run build && npm i -g .",
+    "dev": "ts-node src/cli.ts",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "lint:check": "eslint \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "chalk": "4.1.1",
+    "yargs": "17.7.1",
+    "yup": "0.32.9"
+  },
+  "devDependencies": {
+    "@types/node": "16.0.1",
+    "@types/yargs": "17.0.2",
+    "@typescript-eslint/eslint-plugin": "4.28.2",
+    "@typescript-eslint/parser": "4.28.2",
+    "eslint": "7.30.0",
+    "eslint-config-prettier": "8.3.0",
+    "ts-node": "10.0.0",
+    "typescript": "4.3.5"
+  }
+}
